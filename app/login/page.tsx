@@ -58,7 +58,7 @@ export default function LoginPage() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button
-            className="rounded-lg bg-sky-400 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-sky-300"
+            className="cursor-pointer rounded-lg bg-sky-400 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-sky-300"
             type="submit"
           >
             Entrar
