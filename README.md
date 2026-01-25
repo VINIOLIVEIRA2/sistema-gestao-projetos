@@ -1,10 +1,6 @@
-Perfeito. Aqui vai um **resumo curto, técnico e organizado**, do jeito que um dev explicaria o projeto para outro dev ou para um gestor.
-
----
-
 ## 📌 Visão geral do projeto
 
-Você está construindo um **sistema de agenda / gestão de trabalho**, onde:
+ **sistema de Gestão de Projetos**, onde:
 
 * Um **usuário** se cadastra e faz login
 * Cria **projetos** (clientes, contratos, objetivos)
@@ -117,11 +113,4 @@ Em ordem lógica (não todos de uma vez):
 4️⃣ Deploy (Vercel + Neon + env)
 5️⃣ Testes automatizados (mais tarde)
 
----
-
-## 🧭 Resumo em uma frase
-
-👉 Você já construiu **um sistema completo de gestão de projetos e tarefas**, com **backend seguro**, **frontend funcional** e **arquitetura limpa**, usando um **método profissional e escalável**.
-
-Se quiser, o próximo passo pode ser **produto**, **arquitetura** ou **deploy** — você escolhe.
 
