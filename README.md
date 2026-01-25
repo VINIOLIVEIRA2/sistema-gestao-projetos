@@ -1,6 +1,6 @@
 ## 📌 Visão geral do projeto
 
- **sistema de Gestão de Projetos**, onde:
+ **sistema de Gestão de Projetos**
 
 * Um **usuário** se cadastra e faz login
 * Cria **projetos** (clientes, contratos, objetivos)
