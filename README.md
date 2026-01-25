@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Perfeito. Aqui vai um **resumo curto, técnico e organizado**, do jeito que um dev explicaria o projeto para outro dev ou para um gestor.
 
-## Getting Started
+---
 
-First, run the development server:
+## 📌 Visão geral do projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Você está construindo um **sistema de agenda / gestão de trabalho**, onde:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Um **usuário** se cadastra e faz login
+* Cria **projetos** (clientes, contratos, objetivos)
+* Dentro de cada projeto, gerencia **tasks** (checklist de trabalho)
+* Marca tasks como concluídas
+* Edita e exclui dados
+* Tudo com **backend real, seguro e persistente**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+É a base de apps como **Trello / Asana / Notion**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧱 Stack utilizada
 
-To learn more about Next.js, take a look at the following resources:
+### Backend / Full Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Next.js (App Router)** – frontend + API
+* **Prisma ORM**
+* **PostgreSQL (Neon)**
+* **JWT** para autenticação
+* **Cookies httpOnly** para segurança
+* **Auth custom (sem NextAuth)**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Frontend
 
-## Deploy on Vercel
+* **React (Client Components)**
+* **Tailwind CSS**
+* Fetch API com `credentials: "include"`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✅ O que já foi executado (concluído)
+
+### 1️⃣ Infraestrutura
+
+* Setup do Next.js (App Router)
+* Conexão com Neon (Postgres)
+* Prisma configurado e sincronizado (`db push`)
+
+### 2️⃣ Autenticação e Autorização
+
+* Cadastro e login de usuários
+* Senha criptografada
+* JWT gerado no login
+* Token salvo em cookie httpOnly
+* Leitura e validação do JWT no backend
+* Helper centralizado `getAuthUser()`
+
+### 3️⃣ Projects (CRUD completo)
+
+* Criar projeto
+* Listar projetos por usuário
+* Editar projeto
+* Excluir projeto
+* Proteção por `userId` (ownership garantido)
+
+### 4️⃣ Tasks (CRUD completo)
+
+* Modelagem no Prisma
+* Criar task por projeto
+* Listar tasks do projeto
+* Editar task (title, done)
+* Excluir task
+* Tasks funcionam como **checklist**
+* Relacionamento seguro (User ↔ Project ↔ Task)
+
+### 5️⃣ Frontend funcional
+
+* UI para projetos
+* UI para tasks
+* Marcar task como done
+* Excluir com confirmação
+* UI em **Tailwind**
+* Loading, mensagens de erro/sucesso
+* Atualização otimista
+
+---
+
+## 🧠 Método de desenvolvimento que estamos usando
+
+👉 **Desenvolvimento incremental + validação por etapas**
+
+Em prática:
+
+1. Criar **uma funcionalidade por vez**
+2. Testar manualmente (Network / status HTTP)
+3. Validar backend **antes** da UI
+4. Integrar com UI mínima
+5. Só avançar quando a etapa atual está estável
+
+Isso evita:
+
+* bugs acumulados
+* retrabalho
+* código “quase funcionando”
+
+É o mesmo método usado em **produtos reais**.
+
+---
+
+## 🔜 Próximos passos naturais
+
+Em ordem lógica (não todos de uma vez):
+
+### Opções técnicas
+
+1️⃣ Middleware global de auth (proteger páginas automaticamente)
+2️⃣ Melhorar UX (edição inline, progresso, prioridades)
+3️⃣ Transformar tasks em **agenda** (datas, visão semanal/mensal)
+4️⃣ Deploy (Vercel + Neon + env)
+5️⃣ Testes automatizados (mais tarde)
+
+---
+
+## 🧭 Resumo em uma frase
+
+👉 Você já construiu **um sistema completo de gestão de projetos e tarefas**, com **backend seguro**, **frontend funcional** e **arquitetura limpa**, usando um **método profissional e escalável**.
+
+Se quiser, o próximo passo pode ser **produto**, **arquitetura** ou **deploy** — você escolhe.
+
