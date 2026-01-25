@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import TopBar from "./components/TopBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,10 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-slate-950 text-slate-100 antialiased`}
       >
+        <TopBar />
         {children}
       </body>
     </html>
