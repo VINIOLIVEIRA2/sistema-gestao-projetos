@@ -36,7 +36,7 @@ export async function POST(
     const { title, dueDate, startDate } = body;
 
     if (!title || typeof title !== "string") {
-      return NextResponse.json({ error: "title é obrigatório" }, { status: 400 });
+      return NextResponse.json({ error: "Título é obrigatório" }, { status: 400 });
     }
 
     const ownsProject = await prisma.project.findFirst({

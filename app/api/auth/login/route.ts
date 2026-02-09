@@ -31,5 +31,5 @@ export async function POST(req: Request) {
     secure: process.env.NODE_ENV === "production",
   });
 
-  return NextResponse.json({ message: "Login ok" });
+  return NextResponse.json({ message: "Login realizado" });
 }

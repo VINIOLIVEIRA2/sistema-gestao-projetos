@@ -18,7 +18,7 @@ export async function PATCH(
 
     return NextResponse.json(project);
   } catch {
-    return NextResponse.json({ error: "NÃ£o autorizado" }, { status: 401 });
+    return NextResponse.json({ error: "Não autorizado" }, { status: 401 });
   }
 }
 

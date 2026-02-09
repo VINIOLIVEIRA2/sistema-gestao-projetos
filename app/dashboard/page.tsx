@@ -64,7 +64,7 @@ export default function DashboardPage() {
 
     if (!res.ok) {
       const data = await res.json().catch(() => ({}));
-      setMsg(data.error ?? "Erro ao deletar projeto");
+      setMsg(data.error ?? "Erro ao excluir projeto");
       return;
     }
 
@@ -78,7 +78,7 @@ export default function DashboardPage() {
   return (
     <main className="mx-auto flex w-full max-w-4xl flex-col items-center space-y-6 p-6">
       <header className="space-y-1 text-center">
-        <h1 className="text-2xl font-semibold">Workspace</h1>
+        <h1 className="text-2xl font-semibold">Painel</h1>
         <p className="text-sm text-slate-300">Gerencie seus projetos e tarefas.</p>
       </header>
 
@@ -102,13 +102,13 @@ export default function DashboardPage() {
           />
           <input
             className="h-11 w-full rounded-lg border border-slate-700 bg-slate-800 px-4 text-sm text-white outline-none focus:border-sky-400"
-            placeholder="TÃ­tulo do projeto"
+            placeholder="Título do projeto"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
 
           <label className="text-sm text-slate-300">
-            ServiÃ§o
+            Serviço
             <select
               value={service}
               onChange={(e) => setService(e.target.value)}
@@ -175,7 +175,7 @@ export default function DashboardPage() {
                           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-slate-700 bg-slate-800 px-2.5 py-1 text-xs font-semibold text-sky-200">
                             Solicitante: {p.requesterName || "N\u00e3o informado"}
                           </div>
-                          <div className="text-sm text-slate-300">ServiÃ§o: {p.service}</div>
+                          <div className="text-sm text-slate-300">Serviço: {p.service}</div>
                           <div className="text-sm text-slate-300">Status: {p.status}</div>
                           <div className="flex items-center gap-3 pt-2">
                             <a

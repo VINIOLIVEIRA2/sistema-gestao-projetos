@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     });
 
     if (exists) {
-      return NextResponse.json({ error: "Email já cadastrado" }, { status: 400 });
+      return NextResponse.json({ error: "E-mail já cadastrado" }, { status: 400 });
     }
 
     const hashed = await bcrypt.hash(password, 10);

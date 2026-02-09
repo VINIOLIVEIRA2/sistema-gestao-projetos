@@ -26,13 +26,13 @@ export default function LoginPage() {
       }
 
       if (!res.ok) {
-        setMsg(data?.error ?? "Erro ao logar");
+        setMsg(data?.error ?? "Erro ao entrar");
         return;
       }
 
       window.location.href = "/dashboard";
     } catch {
-      setMsg("Erro de conexao. Tente novamente.");
+      setMsg("Erro de conexão. Tente novamente.");
     }
   }
 
@@ -54,7 +54,7 @@ export default function LoginPage() {
         <form onSubmit={handleLogin} className="grid gap-3">
           <input
             className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 text-sm text-white outline-none focus:border-sky-400"
-            placeholder="Email"
+            placeholder="E-mail"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}

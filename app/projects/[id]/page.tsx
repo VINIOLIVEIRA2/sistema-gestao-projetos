@@ -37,7 +37,7 @@ export default function ProjectTasksPage() {
     1: "bg-yellow-200 text-yellow-800",
     2: "bg-red-200 text-red-800",
   };
-  const priorityLabels = ["Low", "Medium", "High"];
+  const priorityLabels = ["Baixa", "Média", "Alta"];
 
   const total = tasks.length;
   const done = tasks.filter((t) => t.done).length;
@@ -79,7 +79,7 @@ export default function ProjectTasksPage() {
       }
       setTasks(data);
     } catch {
-      setError("Falha ao carregar tasks.");
+      setError("Falha ao carregar tarefas.");
     } finally {
       setLoading(false);
     }
@@ -115,10 +115,10 @@ export default function ProjectTasksPage() {
       setStartDate("");
       setDueDate("");
       setNotes("");
-      setMessage("Task criada.");
+      setMessage("Tarefa criada.");
       await loadTasks();
     } catch {
-      setError("Falha ao criar task.");
+      setError("Falha ao criar tarefa.");
     } finally {
       setSaving(false);
     }
@@ -144,7 +144,7 @@ export default function ProjectTasksPage() {
       if (!res.ok) throw new Error("PATCH failed");
     } catch {
       setTasks(prev);
-      setError("Falha ao atualizar task.");
+      setError("Falha ao atualizar tarefa.");
     }
   }
 
@@ -173,7 +173,7 @@ export default function ProjectTasksPage() {
   }
 
   async function deleteTask(id: string) {
-    const ok = window.confirm("Tem certeza que deseja excluir esta task?");
+    const ok = window.confirm("Tem certeza que deseja excluir esta tarefa?");
     if (!ok) return;
 
     setError(null);
@@ -187,10 +187,10 @@ export default function ProjectTasksPage() {
 
       if (!res.ok) throw new Error(`DELETE task ${res.status}`);
 
-      setMessage("Task excluída.");
+      setMessage("Tarefa excluída.");
       await loadTasks();
     } catch {
-      setError("Falha ao excluir task.");
+      setError("Falha ao excluir tarefa.");
     } finally {
       setDeletingId(null);
     }

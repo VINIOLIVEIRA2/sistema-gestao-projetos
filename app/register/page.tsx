@@ -90,7 +90,7 @@ export default function RegisterPage() {
               required
             />
             <span className="pointer-events-none absolute left-2.5 top-1 text-xs text-slate-400 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-sm peer-focus:top-1 peer-focus:text-xs peer-focus:text-sky-400 peer-valid:text-sky-400">
-              Email
+              E-mail
             </span>
           </label>
 
@@ -126,7 +126,7 @@ export default function RegisterPage() {
             type="submit"
             className="rounded-lg bg-sky-400 px-3 py-2 text-sm font-semibold text-slate-950 hover:bg-sky-300"
           >
-            Submit
+            Cadastrar
           </button>
         </form>
 

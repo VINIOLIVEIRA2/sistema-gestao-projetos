@@ -15,7 +15,7 @@ export async function DELETE(
     });
 
     if (result.count === 0) {
-      return NextResponse.json({ error: "Task não encontrada" }, { status: 404 });
+      return NextResponse.json({ error: "Tarefa não encontrada" }, { status: 404 });
     }
 
     return NextResponse.json({ ok: true });
@@ -72,7 +72,7 @@ export async function PATCH(
 
     if (result.count === 0) {
       return NextResponse.json(
-        { error: "Task não encontrada" },
+        { error: "Tarefa não encontrada" },
         { status: 404 }
       );
     }
